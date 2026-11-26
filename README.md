@@ -69,6 +69,12 @@ Settings (environment variables): `PORT` (default 3000), `DB_PATH` (default `dat
 3. Money is in **centavos** (₱3,000,000 = `300000000`); rates are **parts per million** (12% = `120000`, 3% = `30000`).
 4. Don't edit old versions — add a new one. Quarters before the new date keep the old answer.
 
+## Vercel (demo only)
+
+`vercel.json` + `api/index.js` let you put the app on Vercel to **show** it (e.g. to staff or clients) — import the GitHub repo in Vercel, no settings needed. It starts with the demo data (logins above).
+
+⚠ **Not for real client records on Vercel.** Vercel has no permanent disk: the database and uploaded receipts live in `/tmp` and are **erased** whenever Vercel restarts the app (after idle time, on every new deploy, or when it scales). Different visitors may even see different copies. For real use, either host on a server with a disk (below) or move to PostgreSQL + cloud file storage (Phase 2 plan in `DECISIONS.md`) — then Vercel works properly.
+
 ## Deploying (when you're ready — not done yet)
 
 Cheapest path for this MVP: one small cloud server (DigitalOcean / Hetzner / Linode, ~US$5–7 ≈ ₱300–400/month) or Railway/Render with a persistent disk (~US$7–10/month), behind HTTPS. See `DECISIONS.md` for the planned move to PostgreSQL + cloud file storage.
