@@ -1,0 +1,29 @@
+{
+  "name": "l2c-books",
+  "version": "1.0.0",
+  "description": "L2C Books & Tax — bookkeeping and BIR tax system (MVP)",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "seed": "node src/seed.js",
+    "test": "node --test --no-warnings 'test/*.test.js'",
+    "backup": "node scripts/backup.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/litacristmar15-svg/My-file.git"
+  },
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/litacristmar15-svg/My-file/issues"
+  },
+  "homepage": "https://github.com/litacristmar15-svg/My-file#readme",
+  "dependencies": {
+    "express": "^4.22.3",
+    "multer": "^1.4.4"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=22.13"
+  }
+}
